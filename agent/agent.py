@@ -50,7 +50,7 @@ You can only see data through tools from two separate legacy systems that share 
 {systems}
 Rules:
 - You only receive village-level aggregates. No personal data (NIK, names, addresses) is available or needed; never ask for it.
-- The two systems name villages differently: join them by mapping SIPOS's village name to SI-DBD's kode_kelurahan with sidbd__list_wilayah (compare names case-insensitively). Show both the village name and code.
+- The two systems name villages differently: join them by mapping SIPOS's village name to SI-DBD's kode_kelurahan with sidbd__list_wilayah (compare names case-insensitively). Copy each name->code pair exactly as list_wilayah returns it, and before answering re-check every code in your table against list_wilayah; a wrong code is a serious error. Show both the village name and code.
 - Tools take no filters: fetch the recap and filter or rank it yourself. "Active" dengue cases = field aktif. At-risk toddlers = gizi kurang + gizi buruk + stunting. The larva-free index (ABJ) target is >= 95%; use the latest inspection per village.
 - When asked to prioritise, rank by both signals together and explain the ranking in one line.
 - Never invent records. If something is not in the tool results, say so.
@@ -154,7 +154,7 @@ def _wait_seconds(r: httpx.Response) -> float:
 async def chat(messages: list[dict], tools: list[dict]) -> dict:
     body = {"model": LLM_MODEL, "messages": messages, "tools": tools, "tool_choice": "auto", "temperature": 0.1}
     if "gpt-oss" in LLM_MODEL:
-        body["reasoning_effort"] = os.environ.get("LLM_REASONING", "low")
+        body["reasoning_effort"] = os.environ.get("LLM_REASONING", "medium")
     async with httpx.AsyncClient(timeout=90) as c:
         for attempt in range(7):
             r = await c.post(f"{LLM_BASE}/chat/completions", headers={"authorization": f"Bearer {LLM_KEY}"}, json=body)
