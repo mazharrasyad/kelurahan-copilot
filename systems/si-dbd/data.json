@@ -1,0 +1,451 @@
+{
+ "wilayah": [
+  {
+   "kode_kelurahan": "31.74.06.1001",
+   "nama_kelurahan": "Kuningan Barat",
+   "kecamatan": "Mampang Prapatan",
+   "kota": "Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1002",
+   "nama_kelurahan": "Pela Mampang",
+   "kecamatan": "Mampang Prapatan",
+   "kota": "Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1003",
+   "nama_kelurahan": "Bangka",
+   "kecamatan": "Mampang Prapatan",
+   "kota": "Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1004",
+   "nama_kelurahan": "Tegal Parang",
+   "kecamatan": "Mampang Prapatan",
+   "kota": "Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1005",
+   "nama_kelurahan": "Mampang Prapatan",
+   "kecamatan": "Mampang Prapatan",
+   "kota": "Jakarta Selatan"
+  }
+ ],
+ "kasus": [
+  {
+   "id": 1,
+   "nik": "3174066703890002",
+   "nama_pasien": "Ayu Permata",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1989-03-27",
+   "alamat": "Jl. Kenari No. 87",
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_onset": "2026-11-02",
+   "status": "terkonfirmasi",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 2,
+   "nik": "3174064212930006",
+   "nama_pasien": "Rina Kurniawan",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1993-12-02",
+   "alamat": "Jl. Flamboyan No. 109",
+   "kode_kelurahan": "31.74.06.1005",
+   "tgl_onset": "2026-11-14",
+   "status": "terkonfirmasi",
+   "faskes_pelapor": "RSUD Mampang"
+  },
+  {
+   "id": 3,
+   "nik": "3174064910000036",
+   "nama_pasien": "Wulan Gunawan",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "2000-10-09",
+   "alamat": "Jl. Cempaka No. 64",
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_onset": "2026-10-30",
+   "status": "suspek",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 4,
+   "nik": "3174065708950011",
+   "nama_pasien": "Rina Harahap",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1995-08-17",
+   "alamat": "Jl. Flamboyan No. 17",
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_onset": "2026-10-26",
+   "status": "terkonfirmasi",
+   "faskes_pelapor": "RS Siaga Raya"
+  },
+  {
+   "id": 5,
+   "nik": "3174065107970025",
+   "nama_pasien": "Dian Pratama",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1997-07-11",
+   "alamat": "Jl. Melati No. 32",
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_onset": "2026-10-03",
+   "status": "sembuh",
+   "faskes_pelapor": "RS Siaga Raya"
+  },
+  {
+   "id": 6,
+   "nik": "3174065012970035",
+   "nama_pasien": "Sri Saputra",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1997-12-10",
+   "alamat": "Jl. Flamboyan No. 108",
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_onset": "2026-11-15",
+   "status": "terkonfirmasi",
+   "faskes_pelapor": "RSUD Mampang"
+  },
+  {
+   "id": 7,
+   "nik": "3174066906980037",
+   "nama_pasien": "Indah Pratama",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1998-06-29",
+   "alamat": "Jl. Melati No. 20",
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_onset": "2026-10-11",
+   "status": "sembuh",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 8,
+   "nik": "3174066805850039",
+   "nama_pasien": "Indah Pratama",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1985-05-28",
+   "alamat": "Jl. Tegal Parang Utara No. 24",
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_onset": "2026-10-28",
+   "status": "suspek",
+   "faskes_pelapor": "RSUD Mampang"
+  },
+  {
+   "id": 9,
+   "nik": "3174062412840040",
+   "nama_pasien": "Rizki Pratama",
+   "jenis_kelamin": "L",
+   "tgl_lahir": "1984-12-24",
+   "alamat": "Jl. Duren No. 41",
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_onset": "2026-10-17",
+   "status": "sembuh",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 10,
+   "nik": "3174063003100041",
+   "nama_pasien": "Bayu Pratama",
+   "jenis_kelamin": "L",
+   "tgl_lahir": "2010-03-30",
+   "alamat": "Jl. Bangka Raya No. 72",
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_onset": "2026-11-15",
+   "status": "terkonfirmasi",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 11,
+   "nik": "3174064708970042",
+   "nama_pasien": "Rina Pratama",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1997-08-07",
+   "alamat": "Jl. Kemang No. 15",
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_onset": "2026-10-10",
+   "status": "sembuh",
+   "faskes_pelapor": "RSUD Mampang"
+  },
+  {
+   "id": 12,
+   "nik": "3174064506930043",
+   "nama_pasien": "Maya Setiawan",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1993-06-05",
+   "alamat": "Jl. Kemang No. 69",
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_onset": "2026-11-05",
+   "status": "suspek",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 13,
+   "nik": "3174060706960044",
+   "nama_pasien": "Hendra Nugroho",
+   "jenis_kelamin": "L",
+   "tgl_lahir": "1996-06-07",
+   "alamat": "Jl. Bangka Raya No. 62",
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_onset": "2026-10-07",
+   "status": "sembuh",
+   "faskes_pelapor": "RS Siaga Raya"
+  },
+  {
+   "id": 14,
+   "nik": "3174060209690045",
+   "nama_pasien": "Agus Kurniawan",
+   "jenis_kelamin": "L",
+   "tgl_lahir": "1969-09-02",
+   "alamat": "Jl. Bangka Raya No. 15",
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_onset": "2026-10-24",
+   "status": "suspek",
+   "faskes_pelapor": "RS Siaga Raya"
+  },
+  {
+   "id": 15,
+   "nik": "3174065505760046",
+   "nama_pasien": "Rina Harahap",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1976-05-15",
+   "alamat": "Jl. Duren No. 43",
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_onset": "2026-10-12",
+   "status": "sembuh",
+   "faskes_pelapor": "RS Siaga Raya"
+  },
+  {
+   "id": 16,
+   "nik": "3174065612910047",
+   "nama_pasien": "Sri Hidayat",
+   "jenis_kelamin": "P",
+   "tgl_lahir": "1991-12-16",
+   "alamat": "Jl. Tegal Parang Utara No. 85",
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_onset": "2026-10-19",
+   "status": "sembuh",
+   "faskes_pelapor": "RS Siaga Raya"
+  },
+  {
+   "id": 17,
+   "nik": "3174060412990048",
+   "nama_pasien": "Fajar Wijaya",
+   "jenis_kelamin": "L",
+   "tgl_lahir": "1999-12-04",
+   "alamat": "Jl. Duren No. 73",
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_onset": "2026-10-29",
+   "status": "terkonfirmasi",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  },
+  {
+   "id": 18,
+   "nik": "3174061703690049",
+   "nama_pasien": "Eko Harahap",
+   "jenis_kelamin": "L",
+   "tgl_lahir": "1969-03-17",
+   "alamat": "Jl. Kemang No. 77",
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_onset": "2026-10-26",
+   "status": "suspek",
+   "faskes_pelapor": "Puskesmas Mampang Prapatan"
+  }
+ ],
+ "jentik": [
+  {
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_periksa": "2026-10-26",
+   "rumah_diperiksa": 128,
+   "rumah_positif_jentik": 4,
+   "abj_persen": 96.9
+  },
+  {
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_periksa": "2026-11-02",
+   "rumah_diperiksa": 140,
+   "rumah_positif_jentik": 14,
+   "abj_persen": 90.0
+  },
+  {
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_periksa": "2026-11-09",
+   "rumah_diperiksa": 89,
+   "rumah_positif_jentik": 7,
+   "abj_persen": 92.1
+  },
+  {
+   "kode_kelurahan": "31.74.06.1001",
+   "tgl_periksa": "2026-11-16",
+   "rumah_diperiksa": 126,
+   "rumah_positif_jentik": 14,
+   "abj_persen": 88.9
+  },
+  {
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_periksa": "2026-10-26",
+   "rumah_diperiksa": 87,
+   "rumah_positif_jentik": 10,
+   "abj_persen": 88.5
+  },
+  {
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_periksa": "2026-11-02",
+   "rumah_diperiksa": 83,
+   "rumah_positif_jentik": 6,
+   "abj_persen": 92.8
+  },
+  {
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_periksa": "2026-11-09",
+   "rumah_diperiksa": 123,
+   "rumah_positif_jentik": 3,
+   "abj_persen": 97.6
+  },
+  {
+   "kode_kelurahan": "31.74.06.1002",
+   "tgl_periksa": "2026-11-16",
+   "rumah_diperiksa": 126,
+   "rumah_positif_jentik": 24,
+   "abj_persen": 81.0
+  },
+  {
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_periksa": "2026-10-26",
+   "rumah_diperiksa": 124,
+   "rumah_positif_jentik": 9,
+   "abj_persen": 92.7
+  },
+  {
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_periksa": "2026-11-02",
+   "rumah_diperiksa": 130,
+   "rumah_positif_jentik": 23,
+   "abj_persen": 82.3
+  },
+  {
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_periksa": "2026-11-09",
+   "rumah_diperiksa": 82,
+   "rumah_positif_jentik": 4,
+   "abj_persen": 95.1
+  },
+  {
+   "kode_kelurahan": "31.74.06.1003",
+   "tgl_periksa": "2026-11-16",
+   "rumah_diperiksa": 136,
+   "rumah_positif_jentik": 14,
+   "abj_persen": 89.7
+  },
+  {
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_periksa": "2026-10-26",
+   "rumah_diperiksa": 139,
+   "rumah_positif_jentik": 4,
+   "abj_persen": 97.1
+  },
+  {
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_periksa": "2026-11-02",
+   "rumah_diperiksa": 100,
+   "rumah_positif_jentik": 23,
+   "abj_persen": 77.0
+  },
+  {
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_periksa": "2026-11-09",
+   "rumah_diperiksa": 81,
+   "rumah_positif_jentik": 13,
+   "abj_persen": 84.0
+  },
+  {
+   "kode_kelurahan": "31.74.06.1004",
+   "tgl_periksa": "2026-11-16",
+   "rumah_diperiksa": 102,
+   "rumah_positif_jentik": 3,
+   "abj_persen": 97.1
+  },
+  {
+   "kode_kelurahan": "31.74.06.1005",
+   "tgl_periksa": "2026-10-26",
+   "rumah_diperiksa": 131,
+   "rumah_positif_jentik": 15,
+   "abj_persen": 88.5
+  },
+  {
+   "kode_kelurahan": "31.74.06.1005",
+   "tgl_periksa": "2026-11-02",
+   "rumah_diperiksa": 124,
+   "rumah_positif_jentik": 24,
+   "abj_persen": 80.6
+  },
+  {
+   "kode_kelurahan": "31.74.06.1005",
+   "tgl_periksa": "2026-11-09",
+   "rumah_diperiksa": 82,
+   "rumah_positif_jentik": 5,
+   "abj_persen": 93.9
+  },
+  {
+   "kode_kelurahan": "31.74.06.1005",
+   "tgl_periksa": "2026-11-16",
+   "rumah_diperiksa": 125,
+   "rumah_positif_jentik": 14,
+   "abj_persen": 88.8
+  }
+ ],
+ "fogging": [
+  {
+   "kode_kelurahan": "31.74.06.1001",
+   "tanggal": "2026-11-25",
+   "jam": "07:00",
+   "rw_sasaran": [
+    "002",
+    "004",
+    "008"
+   ],
+   "petugas": "Sudin Kesehatan Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1002",
+   "tanggal": "2026-11-27",
+   "jam": "15:30",
+   "rw_sasaran": [
+    "003",
+    "007",
+    "008"
+   ],
+   "petugas": "Sudin Kesehatan Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1003",
+   "tanggal": "2026-11-27",
+   "jam": "08:00",
+   "rw_sasaran": [
+    "001",
+    "005",
+    "008"
+   ],
+   "petugas": "Sudin Kesehatan Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1004",
+   "tanggal": "2026-11-21",
+   "jam": "08:00",
+   "rw_sasaran": [
+    "001",
+    "002",
+    "007"
+   ],
+   "petugas": "Sudin Kesehatan Jakarta Selatan"
+  },
+  {
+   "kode_kelurahan": "31.74.06.1005",
+   "tanggal": "2026-11-22",
+   "jam": "08:00",
+   "rw_sasaran": [
+    "002",
+    "004",
+    "007"
+   ],
+   "petugas": "Sudin Kesehatan Jakarta Selatan"
+  }
+ ]
+}

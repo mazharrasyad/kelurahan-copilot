@@ -1,0 +1,39 @@
+# NIK Copilot on one VPS: two legacy APIs (internal only) + the agent web app.
+# The agent runs the two Synapse-generated MCP servers as stdio subprocesses.
+x-py: &py
+  build: .
+  restart: unless-stopped
+  mem_limit: 256m
+  environment:
+    PYTHONUNBUFFERED: "1"
+
+services:
+  sipos:
+    <<: *py
+    working_dir: /app/systems/sipos-posyandu
+    command: uvicorn app:app --host 0.0.0.0 --port 8101
+    volumes: ["./systems/sipos-posyandu:/app/systems/sipos-posyandu:ro"]
+
+  sidbd:
+    <<: *py
+    working_dir: /app/systems/si-dbd
+    command: uvicorn app:app --host 0.0.0.0 --port 8102
+    volumes: ["./systems/si-dbd:/app/systems/si-dbd:ro"]
+
+  agent:
+    <<: *py
+    working_dir: /app/agent
+    command: uvicorn server:app --host 0.0.0.0 --port 8103 --proxy-headers --forwarded-allow-ips="*"
+    volumes:
+      - ./agent:/app/agent:ro
+      - ./systems:/app/systems:ro
+    environment:
+      PYTHONUNBUFFERED: "1"
+      SIPOS_BASE_URL: http://sipos:8101
+      SIDBD_BASE_URL: http://sidbd:8102
+      BASE_PATH: /nik-copilot
+    env_file:
+      - path: .env
+        required: false
+    ports: ["127.0.0.1:3180:8103"]
+    depends_on: [sipos, sidbd]

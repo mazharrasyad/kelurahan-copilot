@@ -1,0 +1,1883 @@
+{
+ "posyandu": [
+  {
+   "id": 1,
+   "nama_posyandu": "Posyandu Mawar",
+   "kelurahan": "Kuningan Barat",
+   "kecamatan": "Mampang Prapatan"
+  },
+  {
+   "id": 2,
+   "nama_posyandu": "Posyandu Melati",
+   "kelurahan": "Pela Mampang",
+   "kecamatan": "Mampang Prapatan"
+  },
+  {
+   "id": 3,
+   "nama_posyandu": "Posyandu Anggrek",
+   "kelurahan": "Bangka",
+   "kecamatan": "Mampang Prapatan"
+  },
+  {
+   "id": 4,
+   "nama_posyandu": "Posyandu Kenanga",
+   "kelurahan": "Tegal Parang",
+   "kecamatan": "Mampang Prapatan"
+  },
+  {
+   "id": 5,
+   "nama_posyandu": "Posyandu Teratai",
+   "kelurahan": "Mampang Prapatan",
+   "kecamatan": "Mampang Prapatan"
+  }
+ ],
+ "balita": [
+  {
+   "id": 1,
+   "nama_balita": "Intan Santoso",
+   "tgl_lahir": "2025-05-15",
+   "jk": "L",
+   "nik_ibu": "3174064208990001",
+   "nama_ibu": "Indah Santoso",
+   "alamat": "Jl. Mawar No. 73",
+   "rt": "012",
+   "rw": "008",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 2,
+   "nama_balita": "Citra Permata",
+   "tgl_lahir": "2024-04-09",
+   "jk": "P",
+   "nik_ibu": "3174066703890002",
+   "nama_ibu": "Ayu Permata",
+   "alamat": "Jl. Kenari No. 87",
+   "rt": "011",
+   "rw": "003",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 3,
+   "nama_balita": "Laila Nugroho",
+   "tgl_lahir": "2024-06-28",
+   "jk": "L",
+   "nik_ibu": "3174065208880003",
+   "nama_ibu": "Dian Nugroho",
+   "alamat": "Jl. Mawar No. 39",
+   "rt": "009",
+   "rw": "004",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 4,
+   "nama_balita": "Zidan Setiawan",
+   "tgl_lahir": "2025-09-27",
+   "jk": "P",
+   "nik_ibu": "3174066002880004",
+   "nama_ibu": "Lestari Setiawan",
+   "alamat": "Jl. Flamboyan No. 8",
+   "rt": "003",
+   "rw": "006",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 5,
+   "nama_balita": "Citra Pratama",
+   "tgl_lahir": "2023-07-10",
+   "jk": "L",
+   "nik_ibu": "3174066601880005",
+   "nama_ibu": "Dewi Pratama",
+   "alamat": "Jl. Cempaka No. 41",
+   "rt": "004",
+   "rw": "004",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 6,
+   "nama_balita": "Raka Kurniawan",
+   "tgl_lahir": "2023-06-23",
+   "jk": "P",
+   "nik_ibu": "3174064212930006",
+   "nama_ibu": "Rina Kurniawan",
+   "alamat": "Jl. Flamboyan No. 109",
+   "rt": "010",
+   "rw": "004",
+   "kelurahan": "Mampang Prapatan",
+   "posyandu_id": 5
+  },
+  {
+   "id": 7,
+   "nama_balita": "Daffa Kurniawan",
+   "tgl_lahir": "2024-07-04",
+   "jk": "P",
+   "nik_ibu": "3174064212930006",
+   "nama_ibu": "Rina Kurniawan",
+   "alamat": "Jl. Flamboyan No. 109",
+   "rt": "010",
+   "rw": "004",
+   "kelurahan": "Mampang Prapatan",
+   "posyandu_id": 5
+  },
+  {
+   "id": 8,
+   "nama_balita": "Gita Harahap",
+   "tgl_lahir": "2024-11-09",
+   "jk": "P",
+   "nik_ibu": "3174065210940007",
+   "nama_ibu": "Dewi Harahap",
+   "alamat": "Jl. Cempaka No. 97",
+   "rt": "004",
+   "rw": "006",
+   "kelurahan": "Mampang Prapatan",
+   "posyandu_id": 5
+  },
+  {
+   "id": 9,
+   "nama_balita": "Citra Rahmawati",
+   "tgl_lahir": "2023-03-20",
+   "jk": "L",
+   "nik_ibu": "3174064312890008",
+   "nama_ibu": "Ani Rahmawati",
+   "alamat": "Jl. Melati No. 53",
+   "rt": "011",
+   "rw": "007",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 10,
+   "nama_balita": "Intan Rahmawati",
+   "tgl_lahir": "2024-03-10",
+   "jk": "L",
+   "nik_ibu": "3174064312890008",
+   "nama_ibu": "Ani Rahmawati",
+   "alamat": "Jl. Melati No. 53",
+   "rt": "011",
+   "rw": "007",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 11,
+   "nama_balita": "Kenzo Wijaya",
+   "tgl_lahir": "2023-03-31",
+   "jk": "P",
+   "nik_ibu": "3174066511980009",
+   "nama_ibu": "Ayu Wijaya",
+   "alamat": "Jl. Cempaka No. 32",
+   "rt": "010",
+   "rw": "003",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 12,
+   "nama_balita": "Hafiz Setiawan",
+   "tgl_lahir": "2023-01-31",
+   "jk": "P",
+   "nik_ibu": "3174064806980010",
+   "nama_ibu": "Maya Setiawan",
+   "alamat": "Jl. Flamboyan No. 64",
+   "rt": "003",
+   "rw": "008",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 13,
+   "nama_balita": "Elsa Harahap",
+   "tgl_lahir": "2022-05-07",
+   "jk": "L",
+   "nik_ibu": "3174065708950011",
+   "nama_ibu": "Rina Harahap",
+   "alamat": "Jl. Flamboyan No. 17",
+   "rt": "012",
+   "rw": "008",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 14,
+   "nama_balita": "Olivia Nugroho",
+   "tgl_lahir": "2025-04-28",
+   "jk": "P",
+   "nik_ibu": "3174067007940012",
+   "nama_ibu": "Dewi Nugroho",
+   "alamat": "Jl. Cempaka No. 55",
+   "rt": "011",
+   "rw": "008",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 15,
+   "nama_balita": "Salsa Rahmawati",
+   "tgl_lahir": "2024-01-11",
+   "jk": "L",
+   "nik_ibu": "3174066711930013",
+   "nama_ibu": "Putri Rahmawati",
+   "alamat": "Jl. Flamboyan No. 40",
+   "rt": "010",
+   "rw": "006",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 16,
+   "nama_balita": "Hafiz Gunawan",
+   "tgl_lahir": "2024-01-15",
+   "jk": "P",
+   "nik_ibu": "3174066002970014",
+   "nama_ibu": "Lestari Gunawan",
+   "alamat": "Jl. Melati No. 112",
+   "rt": "007",
+   "rw": "006",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 17,
+   "nama_balita": "Daffa Santoso",
+   "tgl_lahir": "2022-09-29",
+   "jk": "P",
+   "nik_ibu": "3174065708010015",
+   "nama_ibu": "Yuni Santoso",
+   "alamat": "Jl. Kenari No. 109",
+   "rt": "008",
+   "rw": "005",
+   "kelurahan": "Mampang Prapatan",
+   "posyandu_id": 5
+  },
+  {
+   "id": 18,
+   "nama_balita": "Aisyah Siregar",
+   "tgl_lahir": "2024-09-11",
+   "jk": "P",
+   "nik_ibu": "3174066506940016",
+   "nama_ibu": "Dewi Siregar",
+   "alamat": "Jl. Kenari No. 24",
+   "rt": "009",
+   "rw": "008",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 19,
+   "nama_balita": "Aisyah Siregar",
+   "tgl_lahir": "2024-02-13",
+   "jk": "L",
+   "nik_ibu": "3174066506940016",
+   "nama_ibu": "Dewi Siregar",
+   "alamat": "Jl. Kenari No. 24",
+   "rt": "009",
+   "rw": "008",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 20,
+   "nama_balita": "Intan Nugroho",
+   "tgl_lahir": "2025-05-25",
+   "jk": "L",
+   "nik_ibu": "3174064402900017",
+   "nama_ibu": "Sri Nugroho",
+   "alamat": "Jl. Kenari No. 18",
+   "rt": "009",
+   "rw": "008",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 21,
+   "nama_balita": "Citra Nugroho",
+   "tgl_lahir": "2022-07-31",
+   "jk": "L",
+   "nik_ibu": "3174064402900017",
+   "nama_ibu": "Sri Nugroho",
+   "alamat": "Jl. Kenari No. 18",
+   "rt": "009",
+   "rw": "008",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 22,
+   "nama_balita": "Intan Setiawan",
+   "tgl_lahir": "2022-08-28",
+   "jk": "L",
+   "nik_ibu": "3174065707960018",
+   "nama_ibu": "Siti Setiawan",
+   "alamat": "Jl. Kenari No. 10",
+   "rt": "008",
+   "rw": "002",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 23,
+   "nama_balita": "Zidan Kurniawan",
+   "tgl_lahir": "2023-07-03",
+   "jk": "L",
+   "nik_ibu": "3174064201990019",
+   "nama_ibu": "Nur Kurniawan",
+   "alamat": "Jl. Flamboyan No. 67",
+   "rt": "010",
+   "rw": "006",
+   "kelurahan": "Mampang Prapatan",
+   "posyandu_id": 5
+  },
+  {
+   "id": 24,
+   "nama_balita": "Naufal Santoso",
+   "tgl_lahir": "2022-07-05",
+   "jk": "L",
+   "nik_ibu": "3174065710920020",
+   "nama_ibu": "Putri Santoso",
+   "alamat": "Jl. Kenari No. 120",
+   "rt": "003",
+   "rw": "002",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 25,
+   "nama_balita": "Salsa Kurniawan",
+   "tgl_lahir": "2025-08-04",
+   "jk": "L",
+   "nik_ibu": "3174065008020021",
+   "nama_ibu": "Dian Kurniawan",
+   "alamat": "Jl. Cempaka No. 102",
+   "rt": "001",
+   "rw": "001",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 26,
+   "nama_balita": "Daffa Siregar",
+   "tgl_lahir": "2022-01-06",
+   "jk": "P",
+   "nik_ibu": "3174066010010022",
+   "nama_ibu": "Lestari Siregar",
+   "alamat": "Jl. Kenari No. 111",
+   "rt": "007",
+   "rw": "004",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 27,
+   "nama_balita": "Raka Hidayat",
+   "tgl_lahir": "2024-03-19",
+   "jk": "L",
+   "nik_ibu": "3174065911980023",
+   "nama_ibu": "Dewi Hidayat",
+   "alamat": "Jl. Kenari No. 73",
+   "rt": "012",
+   "rw": "001",
+   "kelurahan": "Kuningan Barat",
+   "posyandu_id": 1
+  },
+  {
+   "id": 28,
+   "nama_balita": "Zidan Gunawan",
+   "tgl_lahir": "2024-02-21",
+   "jk": "P",
+   "nik_ibu": "3174067001960024",
+   "nama_ibu": "Fitri Gunawan",
+   "alamat": "Jl. Kenari No. 85",
+   "rt": "006",
+   "rw": "006",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 29,
+   "nama_balita": "Naufal Pratama",
+   "tgl_lahir": "2023-10-09",
+   "jk": "L",
+   "nik_ibu": "3174065107970025",
+   "nama_ibu": "Dian Pratama",
+   "alamat": "Jl. Melati No. 32",
+   "rt": "009",
+   "rw": "008",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 30,
+   "nama_balita": "Citra Rahmawati",
+   "tgl_lahir": "2023-08-31",
+   "jk": "P",
+   "nik_ibu": "3174065008960026",
+   "nama_ibu": "Indah Rahmawati",
+   "alamat": "Jl. Kenari No. 112",
+   "rt": "004",
+   "rw": "005",
+   "kelurahan": "Mampang Prapatan",
+   "posyandu_id": 5
+  },
+  {
+   "id": 31,
+   "nama_balita": "Kenzo Permata",
+   "tgl_lahir": "2025-04-19",
+   "jk": "L",
+   "nik_ibu": "3174065707000027",
+   "nama_ibu": "Fitri Permata",
+   "alamat": "Jl. Cempaka No. 100",
+   "rt": "004",
+   "rw": "004",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 32,
+   "nama_balita": "Zidan Permata",
+   "tgl_lahir": "2024-01-01",
+   "jk": "L",
+   "nik_ibu": "3174064208920028",
+   "nama_ibu": "Dian Permata",
+   "alamat": "Jl. Melati No. 41",
+   "rt": "005",
+   "rw": "007",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 33,
+   "nama_balita": "Intan Gunawan",
+   "tgl_lahir": "2025-09-10",
+   "jk": "P",
+   "nik_ibu": "3174064604000029",
+   "nama_ibu": "Ani Gunawan",
+   "alamat": "Jl. Flamboyan No. 81",
+   "rt": "001",
+   "rw": "004",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 34,
+   "nama_balita": "Laila Gunawan",
+   "tgl_lahir": "2022-08-09",
+   "jk": "L",
+   "nik_ibu": "3174064604000029",
+   "nama_ibu": "Ani Gunawan",
+   "alamat": "Jl. Flamboyan No. 81",
+   "rt": "001",
+   "rw": "004",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 35,
+   "nama_balita": "Naufal Pratama",
+   "tgl_lahir": "2023-07-19",
+   "jk": "P",
+   "nik_ibu": "3174064605980030",
+   "nama_ibu": "Wulan Pratama",
+   "alamat": "Jl. Cempaka No. 43",
+   "rt": "011",
+   "rw": "004",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 36,
+   "nama_balita": "Kenzo Pratama",
+   "tgl_lahir": "2024-08-26",
+   "jk": "P",
+   "nik_ibu": "3174064605980030",
+   "nama_ibu": "Wulan Pratama",
+   "alamat": "Jl. Cempaka No. 43",
+   "rt": "011",
+   "rw": "004",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 37,
+   "nama_balita": "Salsa Hidayat",
+   "tgl_lahir": "2023-02-07",
+   "jk": "L",
+   "nik_ibu": "3174066808890031",
+   "nama_ibu": "Fitri Hidayat",
+   "alamat": "Jl. Kenari No. 57",
+   "rt": "009",
+   "rw": "008",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 38,
+   "nama_balita": "Aisyah Gunawan",
+   "tgl_lahir": "2025-04-25",
+   "jk": "P",
+   "nik_ibu": "3174064702010032",
+   "nama_ibu": "Nur Gunawan",
+   "alamat": "Jl. Kenari No. 38",
+   "rt": "012",
+   "rw": "007",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 39,
+   "nama_balita": "Laila Rahmawati",
+   "tgl_lahir": "2025-04-13",
+   "jk": "P",
+   "nik_ibu": "3174065110010033",
+   "nama_ibu": "Sri Rahmawati",
+   "alamat": "Jl. Cempaka No. 88",
+   "rt": "001",
+   "rw": "008",
+   "kelurahan": "Pela Mampang",
+   "posyandu_id": 2
+  },
+  {
+   "id": 40,
+   "nama_balita": "Salsa Pratama",
+   "tgl_lahir": "2022-06-13",
+   "jk": "P",
+   "nik_ibu": "3174065601960034",
+   "nama_ibu": "Rina Pratama",
+   "alamat": "Jl. Kenari No. 78",
+   "rt": "003",
+   "rw": "008",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 41,
+   "nama_balita": "Aisyah Saputra",
+   "tgl_lahir": "2024-02-22",
+   "jk": "P",
+   "nik_ibu": "3174065012970035",
+   "nama_ibu": "Sri Saputra",
+   "alamat": "Jl. Flamboyan No. 108",
+   "rt": "001",
+   "rw": "003",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 42,
+   "nama_balita": "Citra Gunawan",
+   "tgl_lahir": "2022-06-30",
+   "jk": "P",
+   "nik_ibu": "3174064910000036",
+   "nama_ibu": "Wulan Gunawan",
+   "alamat": "Jl. Cempaka No. 64",
+   "rt": "005",
+   "rw": "003",
+   "kelurahan": "Bangka",
+   "posyandu_id": 3
+  },
+  {
+   "id": 43,
+   "nama_balita": "Laila Pratama",
+   "tgl_lahir": "2024-03-09",
+   "jk": "P",
+   "nik_ibu": "3174066906980037",
+   "nama_ibu": "Indah Pratama",
+   "alamat": "Jl. Melati No. 20",
+   "rt": "003",
+   "rw": "007",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 44,
+   "nama_balita": "Elsa Wijaya",
+   "tgl_lahir": "2024-08-14",
+   "jk": "P",
+   "nik_ibu": "3174064605000038",
+   "nama_ibu": "Indah Wijaya",
+   "alamat": "Jl. Mawar No. 47",
+   "rt": "010",
+   "rw": "008",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  },
+  {
+   "id": 45,
+   "nama_balita": "Laila Wijaya",
+   "tgl_lahir": "2025-02-28",
+   "jk": "L",
+   "nik_ibu": "3174064605000038",
+   "nama_ibu": "Indah Wijaya",
+   "alamat": "Jl. Mawar No. 47",
+   "rt": "010",
+   "rw": "008",
+   "kelurahan": "Tegal Parang",
+   "posyandu_id": 4
+  }
+ ],
+ "penimbangan": [
+  {
+   "balita_id": 1,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 84.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 1,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 85.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 1,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.4,
+   "tinggi_cm": 86.4,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 1,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.3,
+   "tinggi_cm": 87.3,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 2,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 96.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 2,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.3,
+   "tinggi_cm": 97.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 2,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 98.4,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 2,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.0,
+   "tinggi_cm": 99.3,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 3,
+   "tanggal": "2026-08-10",
+   "berat_kg": 11.1,
+   "tinggi_cm": 94.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 3,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 95.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 3,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 96.0,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 3,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 97.0,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 4,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.8,
+   "tinggi_cm": 80.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 4,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.8,
+   "tinggi_cm": 81.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 4,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 82.3,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 4,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 83.3,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 5,
+   "tanggal": "2026-08-10",
+   "berat_kg": 13.9,
+   "tinggi_cm": 108.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 5,
+   "tanggal": "2026-09-10",
+   "berat_kg": 14.2,
+   "tinggi_cm": 109.7,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 5,
+   "tanggal": "2026-10-10",
+   "berat_kg": 14.3,
+   "tinggi_cm": 110.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 5,
+   "tanggal": "2026-11-10",
+   "berat_kg": 14.4,
+   "tinggi_cm": 111.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 6,
+   "tanggal": "2026-08-10",
+   "berat_kg": 11.5,
+   "tinggi_cm": 105.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 6,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.3,
+   "tinggi_cm": 106.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 6,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.3,
+   "tinggi_cm": 107.2,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 6,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.1,
+   "tinggi_cm": 108.1,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 7,
+   "tanggal": "2026-08-10",
+   "berat_kg": 13.0,
+   "tinggi_cm": 98.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 7,
+   "tanggal": "2026-09-10",
+   "berat_kg": 13.3,
+   "tinggi_cm": 98.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 7,
+   "tanggal": "2026-10-10",
+   "berat_kg": 13.4,
+   "tinggi_cm": 99.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 7,
+   "tanggal": "2026-11-10",
+   "berat_kg": 13.8,
+   "tinggi_cm": 100.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 8,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.2,
+   "tinggi_cm": 90.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 8,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.9,
+   "tinggi_cm": 91.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 8,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.8,
+   "tinggi_cm": 92.0,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 8,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.6,
+   "tinggi_cm": 92.9,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 9,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.8,
+   "tinggi_cm": 108.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 9,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.6,
+   "tinggi_cm": 109.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 9,
+   "tanggal": "2026-10-10",
+   "berat_kg": 9.3,
+   "tinggi_cm": 110.0,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 9,
+   "tanggal": "2026-11-10",
+   "berat_kg": 8.9,
+   "tinggi_cm": 110.9,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 10,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 101.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 10,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 102.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 10,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.2,
+   "tinggi_cm": 103.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 10,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.3,
+   "tinggi_cm": 104.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 11,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 111.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 11,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 112.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 11,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 113.7,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 11,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 114.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 12,
+   "tanggal": "2026-08-10",
+   "berat_kg": 11.6,
+   "tinggi_cm": 113.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 12,
+   "tanggal": "2026-09-10",
+   "berat_kg": 12.0,
+   "tinggi_cm": 114.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 12,
+   "tanggal": "2026-10-10",
+   "berat_kg": 12.2,
+   "tinggi_cm": 115.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 12,
+   "tanggal": "2026-11-10",
+   "berat_kg": 12.4,
+   "tinggi_cm": 116.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 13,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 117.7,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 13,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 118.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 13,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 119.5,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 13,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 120.4,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 14,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 89.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 14,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 90.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 14,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 90.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 14,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.1,
+   "tinggi_cm": 91.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 15,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.7,
+   "tinggi_cm": 103.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 15,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 104.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 15,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 105.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 15,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 106.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 16,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 103.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 16,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 104.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 16,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 105.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 16,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.2,
+   "tinggi_cm": 105.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 17,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.7,
+   "tinggi_cm": 117.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 17,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.8,
+   "tinggi_cm": 118.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 17,
+   "tanggal": "2026-10-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 119.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 17,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 120.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 18,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.0,
+   "tinggi_cm": 91.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 18,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.9,
+   "tinggi_cm": 92.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 18,
+   "tanggal": "2026-10-10",
+   "berat_kg": 12.0,
+   "tinggi_cm": 93.8,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 18,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.8,
+   "tinggi_cm": 94.7,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 19,
+   "tanggal": "2026-08-10",
+   "berat_kg": 11.9,
+   "tinggi_cm": 102.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 19,
+   "tanggal": "2026-09-10",
+   "berat_kg": 12.1,
+   "tinggi_cm": 103.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 19,
+   "tanggal": "2026-10-10",
+   "berat_kg": 12.4,
+   "tinggi_cm": 104.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 19,
+   "tanggal": "2026-11-10",
+   "berat_kg": 12.7,
+   "tinggi_cm": 105.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 20,
+   "tanggal": "2026-08-10",
+   "berat_kg": 13.7,
+   "tinggi_cm": 88.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 20,
+   "tanggal": "2026-09-10",
+   "berat_kg": 14.0,
+   "tinggi_cm": 89.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 20,
+   "tanggal": "2026-10-10",
+   "berat_kg": 14.3,
+   "tinggi_cm": 90.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 20,
+   "tanggal": "2026-11-10",
+   "berat_kg": 14.6,
+   "tinggi_cm": 91.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 21,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.2,
+   "tinggi_cm": 119.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 21,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.4,
+   "tinggi_cm": 120.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 21,
+   "tanggal": "2026-10-10",
+   "berat_kg": 9.6,
+   "tinggi_cm": 121.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 21,
+   "tanggal": "2026-11-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 121.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 22,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 118.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 22,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 119.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 22,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.4,
+   "tinggi_cm": 120.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 22,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 121.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 23,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 109.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 23,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 110.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 23,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 110.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 23,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 111.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 24,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.2,
+   "tinggi_cm": 115.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 24,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.1,
+   "tinggi_cm": 116.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 24,
+   "tanggal": "2026-10-10",
+   "berat_kg": 9.1,
+   "tinggi_cm": 117.7,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 24,
+   "tanggal": "2026-11-10",
+   "berat_kg": 8.9,
+   "tinggi_cm": 118.7,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 25,
+   "tanggal": "2026-08-10",
+   "berat_kg": 13.3,
+   "tinggi_cm": 86.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 25,
+   "tanggal": "2026-09-10",
+   "berat_kg": 13.6,
+   "tinggi_cm": 87.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 25,
+   "tanggal": "2026-10-10",
+   "berat_kg": 13.9,
+   "tinggi_cm": 88.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 25,
+   "tanggal": "2026-11-10",
+   "berat_kg": 14.2,
+   "tinggi_cm": 88.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 26,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.3,
+   "tinggi_cm": 121.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 26,
+   "tanggal": "2026-09-10",
+   "berat_kg": 12.1,
+   "tinggi_cm": 122.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 26,
+   "tanggal": "2026-10-10",
+   "berat_kg": 12.0,
+   "tinggi_cm": 123.1,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 26,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.8,
+   "tinggi_cm": 124.1,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 27,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.8,
+   "tinggi_cm": 101.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 27,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 102.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 27,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 103.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 27,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 104.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 28,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 102.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 28,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 103.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 28,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.1,
+   "tinggi_cm": 103.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 28,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.5,
+   "tinggi_cm": 104.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 29,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 106.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 29,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 107.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 29,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 107.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 29,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.3,
+   "tinggi_cm": 108.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 30,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.9,
+   "tinggi_cm": 107.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 30,
+   "tanggal": "2026-09-10",
+   "berat_kg": 13.2,
+   "tinggi_cm": 108.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 30,
+   "tanggal": "2026-10-10",
+   "berat_kg": 13.4,
+   "tinggi_cm": 109.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 30,
+   "tanggal": "2026-11-10",
+   "berat_kg": 13.6,
+   "tinggi_cm": 110.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 31,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 89.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 31,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 90.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 31,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 91.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 31,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.2,
+   "tinggi_cm": 92.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 32,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 103.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 32,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.2,
+   "tinggi_cm": 104.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 32,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 105.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 32,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 106.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 33,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.5,
+   "tinggi_cm": 85.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 33,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.7,
+   "tinggi_cm": 86.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 33,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.8,
+   "tinggi_cm": 86.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 33,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 87.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 34,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.9,
+   "tinggi_cm": 114.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 34,
+   "tanggal": "2026-09-10",
+   "berat_kg": 12.9,
+   "tinggi_cm": 115.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 34,
+   "tanggal": "2026-10-10",
+   "berat_kg": 12.5,
+   "tinggi_cm": 116.7,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 34,
+   "tanggal": "2026-11-10",
+   "berat_kg": 12.6,
+   "tinggi_cm": 117.6,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 35,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 108.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 35,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.3,
+   "tinggi_cm": 109.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 35,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 110.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 35,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 111.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 36,
+   "tanggal": "2026-08-10",
+   "berat_kg": 11.5,
+   "tinggi_cm": 92.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 36,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.2,
+   "tinggi_cm": 93.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 36,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.2,
+   "tinggi_cm": 94.2,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 36,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.1,
+   "tinggi_cm": 95.2,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 37,
+   "tanggal": "2026-08-10",
+   "berat_kg": 13.6,
+   "tinggi_cm": 109.4,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 37,
+   "tanggal": "2026-09-10",
+   "berat_kg": 13.6,
+   "tinggi_cm": 110.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 37,
+   "tanggal": "2026-10-10",
+   "berat_kg": 13.3,
+   "tinggi_cm": 111.2,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 37,
+   "tanggal": "2026-11-10",
+   "berat_kg": 13.0,
+   "tinggi_cm": 112.2,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 38,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 85.2,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 38,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.3,
+   "tinggi_cm": 86.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 38,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.4,
+   "tinggi_cm": 87.0,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 38,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.0,
+   "tinggi_cm": 87.9,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 39,
+   "tanggal": "2026-08-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 85.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 39,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.0,
+   "tinggi_cm": 86.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 39,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.1,
+   "tinggi_cm": 87.3,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 39,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.9,
+   "tinggi_cm": 88.3,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 40,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.1,
+   "tinggi_cm": 116.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 40,
+   "tanggal": "2026-09-10",
+   "berat_kg": 11.7,
+   "tinggi_cm": 117.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 40,
+   "tanggal": "2026-10-10",
+   "berat_kg": 11.5,
+   "tinggi_cm": 118.4,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 40,
+   "tanggal": "2026-11-10",
+   "berat_kg": 11.3,
+   "tinggi_cm": 119.3,
+   "status_gizi": "gizi kurang"
+  },
+  {
+   "balita_id": 41,
+   "tanggal": "2026-08-10",
+   "berat_kg": 12.5,
+   "tinggi_cm": 102.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 41,
+   "tanggal": "2026-09-10",
+   "berat_kg": 12.6,
+   "tinggi_cm": 102.9,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 41,
+   "tanggal": "2026-10-10",
+   "berat_kg": 12.8,
+   "tinggi_cm": 103.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 41,
+   "tanggal": "2026-11-10",
+   "berat_kg": 13.0,
+   "tinggi_cm": 104.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 42,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 116.1,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 42,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.5,
+   "tinggi_cm": 117.0,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 42,
+   "tanggal": "2026-10-10",
+   "berat_kg": 9.1,
+   "tinggi_cm": 117.9,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 42,
+   "tanggal": "2026-11-10",
+   "berat_kg": 9.2,
+   "tinggi_cm": 118.8,
+   "status_gizi": "stunting"
+  },
+  {
+   "balita_id": 43,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.7,
+   "tinggi_cm": 101.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 43,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.9,
+   "tinggi_cm": 102.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 43,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 103.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 43,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.3,
+   "tinggi_cm": 104.3,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 44,
+   "tanggal": "2026-08-10",
+   "berat_kg": 10.0,
+   "tinggi_cm": 96.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 44,
+   "tanggal": "2026-09-10",
+   "berat_kg": 10.1,
+   "tinggi_cm": 97.7,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 44,
+   "tanggal": "2026-10-10",
+   "berat_kg": 10.4,
+   "tinggi_cm": 98.6,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 44,
+   "tanggal": "2026-11-10",
+   "berat_kg": 10.6,
+   "tinggi_cm": 99.5,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 45,
+   "tanggal": "2026-08-10",
+   "berat_kg": 9.7,
+   "tinggi_cm": 86.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 45,
+   "tanggal": "2026-09-10",
+   "berat_kg": 9.6,
+   "tinggi_cm": 87.8,
+   "status_gizi": "normal"
+  },
+  {
+   "balita_id": 45,
+   "tanggal": "2026-10-10",
+   "berat_kg": 9.7,
+   "tinggi_cm": 88.7,
+   "status_gizi": "gizi buruk"
+  },
+  {
+   "balita_id": 45,
+   "tanggal": "2026-11-10",
+   "berat_kg": 9.7,
+   "tinggi_cm": 89.6,
+   "status_gizi": "gizi kurang"
+  }
+ ]
+}

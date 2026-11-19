@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "repo_hash": "5625dbac1079eec7e8bc0984cce82de4c95035ddc300b3310bc6097d4d1cafb2",
+  "language": "python",
+  "framework": "fastapi",
+  "package_import_root": "app",
+  "captured_functions": false,
+  "files": {
+    "app.py": {
+      "sha": "4e40676ccd035aece9f47d1e1f7a38170972421aa033bce90e110d4d884b829d",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/api/wilayah",
+          "handler_module": "app",
+          "handler_qualname": "list_wilayah",
+          "description": "List villages: official kode_kelurahan with village name, district and city.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "list_wilayah",
+          "file_path": "app.py",
+          "start_line": 21,
+          "end_line": 23
+        },
+        {
+          "method": "GET",
+          "path": "/api/kasus",
+          "handler_module": "app",
+          "handler_qualname": "list_kasus",
+          "description": "List dengue cases with patient NIK, village code, onset date and status.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "list_kasus",
+          "file_path": "app.py",
+          "start_line": 27,
+          "end_line": 38
+        },
+        {
+          "method": "GET",
+          "path": "/api/kasus/nik/{nik}",
+          "handler_module": "app",
+          "handler_qualname": "get_kasus_by_nik",
+          "description": "Look up dengue cases of one person by their 16-digit NIK (empty list if none).",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "get_kasus_by_nik",
+          "file_path": "app.py",
+          "start_line": 42,
+          "end_line": 44
+        },
+        {
+          "method": "GET",
+          "path": "/api/kasus/{kasus_id}",
+          "handler_module": "app",
+          "handler_qualname": "get_kasus",
+          "description": "Get one dengue case by id.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "get_kasus",
+          "file_path": "app.py",
+          "start_line": 48,
+          "end_line": 53
+        },
+        {
+          "method": "GET",
+          "path": "/api/jentik",
+          "handler_module": "app",
+          "handler_qualname": "list_jentik",
+          "description": "Weekly larva inspections per village: houses checked, positive houses and larva-free index (ABJ %).",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "list_jentik",
+          "file_path": "app.py",
+          "start_line": 57,
+          "end_line": 59
+        },
+        {
+          "method": "GET",
+          "path": "/health",
+          "handler_module": "app",
+          "handler_qualname": "health",
+          "description": "",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "health",
+          "file_path": "app.py",
+          "start_line": 63,
+          "end_line": 64
+        }
+      ],
+      "functions": []
+    },
+    "data.py": {
+      "sha": "aac4cf66e60f23c7723cc7d3b1a7b3174b7aed0de50016fd472d9d7ac009fb41",
+      "endpoints": [],
+      "functions": []
+    }
+  },
+  "lines_scanned": 73,
+  "updated_at": 1795086960468
+}
