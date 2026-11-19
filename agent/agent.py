@@ -11,6 +11,7 @@ import asyncio
 import glob
 import json
 import os
+import re
 import time
 from contextlib import AsyncExitStack
 from dataclasses import dataclass, field
@@ -53,8 +54,8 @@ Rules:
 - Tools take no filters: fetch the recap and filter or rank it yourself. "Active" dengue cases = field aktif. At-risk toddlers = gizi kurang + gizi buruk + stunting. The larva-free index (ABJ) target is >= 95%; use the latest inspection per village.
 - When asked to prioritise, rank by both signals together and explain the ranking in one line.
 - Never invent records. If something is not in the tool results, say so.
-- Answer in the user's language, concisely, with a short table or bullet list. For every fact, say which system it came from (SIPOS or SI-DBD).
-- Use the minimum number of tool calls needed."""
+- Answer in the same language as the user's question (English question -> English answer), concisely, with a short table or bullet list. For every fact, say which system it came from (SIPOS or SI-DBD).
+- Use the minimum number of tool calls: call only the tools the question needs (list_posyandu and rekap_penimbangan only when asked about health posts or attendance), and call each tool at most once."""
 
 
 @dataclass
@@ -136,15 +137,27 @@ def openai_tools(tools: dict) -> list[dict]:
     return out
 
 
+def _wait_seconds(r: httpx.Response) -> float:
+    """How long the provider asks us to wait after a 429 (header, or 'try again in 1.2s / 350ms')."""
+    m = re.search(r"try again in ([0-9.]+)(ms|s)", r.text)
+    if m:
+        v = float(m.group(1)) / (1000 if m.group(2) == "ms" else 1)
+    else:
+        v = float(r.headers.get("retry-after", "3"))
+    return min(max(v, 0.5) + 0.5, 20)
+
+
 async def chat(messages: list[dict], tools: list[dict]) -> dict:
+    body = {"model": LLM_MODEL, "messages": messages, "tools": tools, "tool_choice": "auto", "temperature": 0.1}
+    if "gpt-oss" in LLM_MODEL:
+        body["reasoning_effort"] = os.environ.get("LLM_REASONING", "low")
     async with httpx.AsyncClient(timeout=90) as c:
-        for attempt in range(3):
-            r = await c.post(f"{LLM_BASE}/chat/completions", headers={"authorization": f"Bearer {LLM_KEY}"},
-                             json={"model": LLM_MODEL, "messages": messages, "tools": tools, "tool_choice": "auto", "temperature": 0.1})
-            if r.status_code == 429 and attempt < 2:
-                await asyncio.sleep(float(r.headers.get("retry-after", "3")))
+        for attempt in range(7):
+            r = await c.post(f"{LLM_BASE}/chat/completions", headers={"authorization": f"Bearer {LLM_KEY}"}, json=body)
+            if r.status_code == 429 and attempt < 6:
+                await asyncio.sleep(_wait_seconds(r))
                 continue
-            if r.status_code == 400 and "tool_use_failed" in r.text and attempt < 2:
+            if r.status_code == 400 and "tool_use_failed" in r.text and attempt < 6:
                 continue  # the model emitted a malformed tool call; ask again
             if r.status_code >= 400:
                 raise RuntimeError(f"LLM HTTP {r.status_code}: {r.text[:300]}")
@@ -183,6 +196,9 @@ async def ask(question: str, history: list[dict] | None = None) -> Result:
                     args = json.loads(call["function"].get("arguments") or "{}")
                 except ValueError:
                     args = {}
+                if not isinstance(args, dict):
+                    args = {}
+                args = {k: v for k, v in args.items() if k and v not in ({}, None, "")}  # drop empty filler args
                 t0 = time.time()
                 if key not in sessions:
                     text, ok = f"Unknown tool {name}", False
