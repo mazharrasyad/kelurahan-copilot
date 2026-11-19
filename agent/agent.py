@@ -144,7 +144,10 @@ async def chat(messages: list[dict], tools: list[dict]) -> dict:
             if r.status_code == 429 and attempt < 2:
                 await asyncio.sleep(float(r.headers.get("retry-after", "3")))
                 continue
-            r.raise_for_status()
+            if r.status_code == 400 and "tool_use_failed" in r.text and attempt < 2:
+                continue  # the model emitted a malformed tool call; ask again
+            if r.status_code >= 400:
+                raise RuntimeError(f"LLM HTTP {r.status_code}: {r.text[:300]}")
             return r.json()["choices"][0]["message"]
     raise RuntimeError("LLM rate limited")
 

@@ -1,4 +1,5 @@
 """Web front end for the cross-system copilot (FastAPI)."""
+import logging
 import os
 import time
 from collections import deque
@@ -10,6 +11,7 @@ from pydantic import BaseModel, Field
 
 import agent
 
+log = logging.getLogger("uvicorn.error")
 app = FastAPI(title="Kelurahan Copilot", docs_url=None, redoc_url=None)
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE_PATH = (os.environ.get("BASE_PATH") or "/").rstrip("/") + "/"
@@ -56,7 +58,11 @@ async def ask(body: Ask, request: Request):
     try:
         r = await agent.ask(body.question.strip(), body.history)
     except Exception as e:
-        raise HTTPException(502, f"Agent error: {type(e).__name__}: {str(e)[:200]}")
+        root = e
+        while isinstance(root, BaseExceptionGroup) and root.exceptions:
+            root = root.exceptions[0]
+        log.error("ask failed", exc_info=root)
+        raise HTTPException(502, f"Agent error: {type(root).__name__}: {str(root)[:300]}")
     if r.error:
         raise HTTPException(503, r.error)
     return asdict(r)
