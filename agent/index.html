@@ -86,7 +86,7 @@ const EXAMPLES = [
 const history = [];
 function md(text) {
   const lines = esc(text).split('\n'); let html = '', list = false, i = 0;
-  const inline = (s) => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\\*/g, '*').replace(/`([^`]+)`/g, '<code>$1</code>');
+  const inline = (s) => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\\\*/g, '*').replace(/`([^`]+)`/g, '<code>$1</code>');
   while (i < lines.length) {
     const l = lines[i];
     if (/^\s*\|.*\|\s*$/.test(l) && i + 1 < lines.length && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1])) {
