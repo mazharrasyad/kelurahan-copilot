@@ -81,6 +81,17 @@ synapse build --local --auto --discover --endpoints "GET /api/wilayah,GET /api/r
 
 The agent opens fresh MCP sessions and lists tools on every question, and always uses the newest server file Synapse generated. The next question can use `list_fogging` straight away, with no restart and no client config change.
 
+## Verified answers
+
+`tools/expected.py` computes the ground truth directly from each system's recap code. On the live deployment (Groq `openai/gpt-oss-120b`, free tier) all four questions match it:
+
+| Question | Expected (ground truth) | Tool calls |
+|---|---|---|
+| 1. Priority villages | Tegal Parang (8 active, 27.6% at risk), Pela Mampang (5, 33.3%), Mampang Prapatan (2, 20.5%) | 3 (both systems) |
+| 2. ABJ < 95% | Kuningan Barat 93.1% (6 at risk, 2 active), Pela Mampang 88.1% (11, 5), Tegal Parang 90.4% (8, 8), Mampang Prapatan 93.5% (8, 2) | 4 |
+| 3. Tegal Parang trend | At-risk toddlers 0 → 8 → 8 → 5 (Aug–Nov); weekly dengue rising to 5 new cases in the week of 9 Nov | 3 |
+| 4. Fogging (after the live update) | Before `/api/fogging` existed the agent said it had no fogging data. After `--discover`: 23–24 Nov for the top three; Kuningan Barat and Bangka have none | 4 |
+
 ## Run it
 
 Needs Docker, plus an OpenAI-compatible LLM key with tool calling (Groq free tier by default).
