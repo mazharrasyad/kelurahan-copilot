@@ -86,7 +86,7 @@ const EXAMPLES = [
 const history = [];
 function md(text) {
   const lines = esc(text).split('\n'); let html = '', list = false, i = 0;
-  const inline = (s) => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/`([^`]+)`/g, '<code>$1</code>');
+  const inline = (s) => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\\*/g, '*').replace(/`([^`]+)`/g, '<code>$1</code>');
   while (i < lines.length) {
     const l = lines[i];
     if (/^\s*\|.*\|\s*$/.test(l) && i + 1 < lines.length && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1])) {
@@ -95,6 +95,8 @@ function md(text) {
       while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) { t += '<tr>' + row(lines[i]).map((c) => `<td>${c}</td>`).join('') + '</tr>'; i++; }
       if (list) { html += '</ul>'; list = false; } html += t + '</tbody></table>'; continue;
     }
+    const h = l.match(/^\s*#{1,4}\s+(.*)$/);
+    if (h) { if (list) { html += '</ul>'; list = false; } html += `<p><strong>${inline(h[1])}</strong></p>`; i++; continue; }
     const li = l.match(/^\s*[-*•]\s+(.*)$/);
     if (li) { if (!list) { html += '<ul>'; list = true; } html += `<li>${inline(li[1])}</li>`; i++; continue; }
     if (list) { html += '</ul>'; list = false; }
