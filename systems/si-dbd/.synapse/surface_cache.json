@@ -7,7 +7,7 @@
   "captured_functions": false,
   "files": {
     "app.py": {
-      "sha": "5b6110c056c3ae4eaa933d7a88e65ecfb75f18d0c1638db29ffa3010735c14db",
+      "sha": "f53d2d036ddfbd32fb1a95653a7aa5d39d3c278dd4cbccdb18f5a425e7596258",
       "endpoints": [
         {
           "method": "GET",
@@ -63,6 +63,19 @@
         },
         {
           "method": "GET",
+          "path": "/api/fogging",
+          "handler_module": "app",
+          "handler_qualname": "list_fogging",
+          "description": "Planned fogging (insecticide spraying) per village code: date, time, number of RW targeted and the team.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "list_fogging",
+          "file_path": "app.py",
+          "start_line": 61,
+          "end_line": 63
+        },
+        {
+          "method": "GET",
           "path": "/api/kasus",
           "handler_module": "app",
           "handler_qualname": "list_kasus",
@@ -71,8 +84,8 @@
           "headers_hint": [],
           "suggested_tool_name": "list_kasus",
           "file_path": "app.py",
-          "start_line": 62,
-          "end_line": 64
+          "start_line": 68,
+          "end_line": 70
         },
         {
           "method": "GET",
@@ -84,18 +97,13 @@
           "headers_hint": [],
           "suggested_tool_name": "health",
           "file_path": "app.py",
-          "start_line": 68,
-          "end_line": 69
+          "start_line": 74,
+          "end_line": 75
         }
       ],
       "functions": []
-    },
-    "data.py": {
-      "sha": "aac4cf66e60f23c7723cc7d3b1a7b3174b7aed0de50016fd472d9d7ac009fb41",
-      "endpoints": [],
-      "functions": []
     }
   },
-  "lines_scanned": 78,
-  "updated_at": 1795089485614
+  "lines_scanned": 84,
+  "updated_at": 1795090735767
 }

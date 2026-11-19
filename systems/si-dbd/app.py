@@ -10,7 +10,7 @@ from typing import Optional
 
 from fastapi import FastAPI, Query
 
-from data import JENTIK, KASUS, WILAYAH
+from data import FOGGING, JENTIK, KASUS, WILAYAH
 
 app = FastAPI(
     title="SI-DBD API",
@@ -55,6 +55,12 @@ def rekap_kasus_mingguan():
 def list_jentik(kode_kelurahan: Optional[str] = Query(None, description="Official village code")):
     """Weekly larva inspections per village: houses checked, houses with larvae and larva-free index (ABJ %, target >= 95)."""
     return [r for r in JENTIK if not kode_kelurahan or r["kode_kelurahan"] == kode_kelurahan]
+
+
+@app.get("/api/fogging")
+def list_fogging(kode_kelurahan: Optional[str] = Query(None, description="Official village code")):
+    """Planned fogging (insecticide spraying) per village code: date, time, number of RW targeted and the team."""
+    return [f for f in FOGGING if not kode_kelurahan or f["kode_kelurahan"] == kode_kelurahan]
 
 
 # --- Record-level route for surveillance staff (de-identified ids). Not exposed to the agent. ---

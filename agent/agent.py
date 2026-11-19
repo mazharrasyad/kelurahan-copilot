@@ -109,7 +109,11 @@ def server_file(cfg: dict) -> str:
     next to the old file instead of overwriting it, so the latest generation wins."""
     folder = os.path.dirname(cfg["server"])
     files = glob.glob(os.path.join(folder, "synapse_auto_server*.py"))
-    return max(files, key=os.path.getmtime) if files else cfg["server"]
+
+    def generation(f):  # synapse_auto_server.py = 1, synapse_auto_server_2.py = 2, ...
+        m = re.search(r"synapse_auto_server_(\d+)\.py$", f)
+        return int(m.group(1)) if m else 1
+    return max(files, key=generation) if files else cfg["server"]
 
 
 async def open_sessions(stack: AsyncExitStack):
