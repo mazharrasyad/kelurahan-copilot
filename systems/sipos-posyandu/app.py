@@ -1,82 +1,107 @@
-"""SIPOS Posyandu - legacy health-post information system (synthetic demo).
+"""SIPOS Posyandu - legacy health-post information system (synthetic, de-identified demo).
 
-A small "legacy" backend in the style of many Indonesian local-government apps:
-toddlers (balita) are registered with their mother's national ID (nik_ibu), villages
-are stored as free-text names, and nutrition status comes from monthly weighings.
-All data is synthetic and generated deterministically at startup.
+In the style of many Indonesian local-government apps: villages are stored as free-text
+names and nutrition status comes from monthly weighings. Record-level routes exist for the
+health-post staff; village-level recap routes (rekap) are what other agencies should use.
 """
-from datetime import date
+from collections import defaultdict
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query
 
-from data import BALITA, PENIMBANGAN, POSYANDU, latest_status
+from data import BALITA, PENIMBANGAN, POSYANDU
 
 app = FastAPI(
     title="SIPOS Posyandu API",
-    description="Health-post (posyandu) records: toddlers, mothers' NIK and monthly weighings. Synthetic data.",
+    description="Health-post (posyandu) records and village-level nutrition recaps. Synthetic, de-identified data.",
     version="1.0.0",
 )
 
-AT_RISK = {"gizi kurang", "gizi buruk", "stunting"}
+AT_RISK = ("gizi kurang", "gizi buruk", "stunting")
 
 
-def _with_status(b: dict) -> dict:
-    s = latest_status(b["id"])
-    return {**b, "status_gizi_terakhir": s["status_gizi"] if s else None, "tgl_timbang_terakhir": s["tanggal"] if s else None}
+def _latest(month: Optional[str] = None) -> dict:
+    """Latest weighing per toddler, optionally only up to a month (YYYY-MM)."""
+    out = {}
+    for p in sorted(PENIMBANGAN, key=lambda p: p["tanggal"]):
+        if month and p["tanggal"][:7] > month:
+            continue
+        out[p["balita_id"]] = p
+    return out
 
 
 @app.get("/api/posyandu")
 def list_posyandu():
-    """List all posyandu (health posts) with their village name (free text) and district."""
+    """List posyandu (health posts) with their village name (free text) and district."""
     return POSYANDU
 
 
-@app.get("/api/balita")
-def list_balita(kelurahan: Optional[str] = Query(None, description="Village name, e.g. 'Pela Mampang'"),
-                status_gizi: Optional[str] = Query(None, description="Latest nutrition status: normal, gizi kurang, gizi buruk, stunting")):
-    """List registered toddlers with their mother's NIK, village and latest nutrition status."""
-    rows = [_with_status(b) for b in BALITA]
-    if kelurahan:
-        rows = [r for r in rows if r["kelurahan"].lower() == kelurahan.lower()]
-    if status_gizi:
-        rows = [r for r in rows if (r["status_gizi_terakhir"] or "").lower() == status_gizi.lower()]
-    return rows
-
-
-@app.get("/api/balita-berisiko")
-def list_balita_berisiko(kelurahan: Optional[str] = Query(None, description="Optional village name filter")):
-    """List at-risk toddlers: latest weighing shows gizi kurang, gizi buruk or stunting."""
-    rows = [_with_status(b) for b in BALITA]
-    rows = [r for r in rows if r["status_gizi_terakhir"] in AT_RISK]
-    if kelurahan:
-        rows = [r for r in rows if r["kelurahan"].lower() == kelurahan.lower()]
-    return rows
-
-
-@app.get("/api/balita/{balita_id}")
-def get_balita(balita_id: int):
-    """Get one toddler by id, including mother's NIK and latest nutrition status."""
+@app.get("/api/rekap/gizi")
+def rekap_gizi(bulan: Optional[str] = Query(None, description="Month YYYY-MM; default the latest")):
+    """Village-level nutrition recap from the latest weighing: registered toddlers, counts per status and percent at risk."""
+    latest = _latest(bulan)
+    rows = defaultdict(lambda: {"terdaftar": 0, "ditimbang": 0, "normal": 0, "gizi kurang": 0, "gizi buruk": 0, "stunting": 0})
     for b in BALITA:
-        if b["id"] == balita_id:
-            return _with_status(b)
-    raise HTTPException(404, "balita not found")
+        r = rows[b["kelurahan"]]
+        r["terdaftar"] += 1
+        p = latest.get(b["id"])
+        if p:
+            r["ditimbang"] += 1
+            r[p["status_gizi"]] += 1
+    out = []
+    for kel, r in sorted(rows.items()):
+        berisiko = sum(r[s] for s in AT_RISK)
+        out.append({"kelurahan": kel, **r, "berisiko": berisiko,
+                    "persen_berisiko": round(100 * berisiko / r["ditimbang"], 1) if r["ditimbang"] else None})
+    return out
+
+
+@app.get("/api/rekap/gizi/tren")
+def rekap_gizi_tren():
+    """Monthly trend per village: number of toddlers weighed and number at risk in each month."""
+    rows = defaultdict(lambda: defaultdict(lambda: {"ditimbang": 0, "berisiko": 0}))
+    kel = {b["id"]: b["kelurahan"] for b in BALITA}
+    for p in PENIMBANGAN:
+        r = rows[kel[p["balita_id"]]][p["tanggal"][:7]]
+        r["ditimbang"] += 1
+        r["berisiko"] += p["status_gizi"] in AT_RISK
+    return [{"kelurahan": k, "bulan": m, **v} for k in sorted(rows) for m, v in sorted(rows[k].items())]
+
+
+@app.get("/api/rekap/penimbangan")
+def rekap_penimbangan():
+    """Posyandu attendance per month (D/S): toddlers weighed (D) out of registered (S), per health post."""
+    reg = defaultdict(int)
+    for b in BALITA:
+        reg[b["posyandu_id"]] += 1
+    pos_of = {b["id"]: b["posyandu_id"] for b in BALITA}
+    came = defaultdict(int)
+    for p in PENIMBANGAN:
+        came[(pos_of[p["balita_id"]], p["tanggal"][:7])] += 1
+    out = []
+    for (pid, month), d in sorted(came.items()):
+        pos = next(x for x in POSYANDU if x["id"] == pid)
+        out.append({"posyandu": pos["nama_posyandu"], "kelurahan": pos["kelurahan"], "bulan": month,
+                    "ditimbang_D": d, "terdaftar_S": reg[pid], "persen_DS": round(100 * d / reg[pid], 1)})
+    return out
+
+
+# --- Record-level routes for posyandu staff (de-identified ids). Not exposed to the agent. ---
+@app.get("/api/balita")
+def list_balita(kelurahan: Optional[str] = None):
+    """Record-level list of registered toddlers (internal ids only)."""
+    return [b for b in BALITA if not kelurahan or b["kelurahan"].lower() == kelurahan.lower()]
 
 
 @app.get("/api/balita/{balita_id}/penimbangan")
-def get_penimbangan(balita_id: int):
-    """Monthly weighing history (weight kg, height cm, nutrition status) of one toddler."""
-    if not any(b["id"] == balita_id for b in BALITA):
+def get_penimbangan(balita_id: str):
+    """Weighing history of one toddler record."""
+    rows = [p for p in PENIMBANGAN if p["balita_id"] == balita_id]
+    if not rows:
         raise HTTPException(404, "balita not found")
-    return [p for p in PENIMBANGAN if p["balita_id"] == balita_id]
-
-
-@app.get("/api/ibu/{nik_ibu}/balita")
-def get_balita_by_ibu(nik_ibu: str):
-    """List the toddlers registered under a mother's 16-digit NIK."""
-    return [_with_status(b) for b in BALITA if b["nik_ibu"] == nik_ibu]
+    return rows
 
 
 @app.get("/health")
 def health():
-    return {"ok": True, "system": "sipos-posyandu", "today": date.today().isoformat()}
+    return {"ok": True, "system": "sipos-posyandu"}

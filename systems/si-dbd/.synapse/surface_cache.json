@@ -7,7 +7,7 @@
   "captured_functions": false,
   "files": {
     "app.py": {
-      "sha": "4e40676ccd035aece9f47d1e1f7a38170972421aa033bce90e110d4d884b829d",
+      "sha": "5b6110c056c3ae4eaa933d7a88e65ecfb75f18d0c1638db29ffa3010735c14db",
       "endpoints": [
         {
           "method": "GET",
@@ -19,60 +19,60 @@
           "headers_hint": [],
           "suggested_tool_name": "list_wilayah",
           "file_path": "app.py",
-          "start_line": 21,
-          "end_line": 23
+          "start_line": 24,
+          "end_line": 26
         },
         {
           "method": "GET",
-          "path": "/api/kasus",
+          "path": "/api/rekap/kasus",
           "handler_module": "app",
-          "handler_qualname": "list_kasus",
-          "description": "List dengue cases with patient NIK, village code, onset date and status.",
+          "handler_qualname": "rekap_kasus",
+          "description": "Dengue recap per village code: active cases (suspek + terkonfirmasi), confirmed, suspected, recovered, and new cases in the last 14 days.",
           "payload_example": null,
           "headers_hint": [],
-          "suggested_tool_name": "list_kasus",
+          "suggested_tool_name": "rekap_kasus",
           "file_path": "app.py",
-          "start_line": 27,
-          "end_line": 38
+          "start_line": 30,
+          "end_line": 41
         },
         {
           "method": "GET",
-          "path": "/api/kasus/nik/{nik}",
+          "path": "/api/rekap/kasus/mingguan",
           "handler_module": "app",
-          "handler_qualname": "get_kasus_by_nik",
-          "description": "Look up dengue cases of one person by their 16-digit NIK (empty list if none).",
+          "handler_qualname": "rekap_kasus_mingguan",
+          "description": "Weekly new dengue cases per village code (week starting Monday), by onset date.",
           "payload_example": null,
           "headers_hint": [],
-          "suggested_tool_name": "get_kasus_by_nik",
+          "suggested_tool_name": "rekap_kasus_mingguan",
           "file_path": "app.py",
-          "start_line": 42,
-          "end_line": 44
-        },
-        {
-          "method": "GET",
-          "path": "/api/kasus/{kasus_id}",
-          "handler_module": "app",
-          "handler_qualname": "get_kasus",
-          "description": "Get one dengue case by id.",
-          "payload_example": null,
-          "headers_hint": [],
-          "suggested_tool_name": "get_kasus",
-          "file_path": "app.py",
-          "start_line": 48,
-          "end_line": 53
+          "start_line": 45,
+          "end_line": 51
         },
         {
           "method": "GET",
           "path": "/api/jentik",
           "handler_module": "app",
           "handler_qualname": "list_jentik",
-          "description": "Weekly larva inspections per village: houses checked, positive houses and larva-free index (ABJ %).",
+          "description": "Weekly larva inspections per village: houses checked, houses with larvae and larva-free index (ABJ %, target >= 95).",
           "payload_example": null,
           "headers_hint": [],
           "suggested_tool_name": "list_jentik",
           "file_path": "app.py",
-          "start_line": 57,
-          "end_line": 59
+          "start_line": 55,
+          "end_line": 57
+        },
+        {
+          "method": "GET",
+          "path": "/api/kasus",
+          "handler_module": "app",
+          "handler_qualname": "list_kasus",
+          "description": "Record-level dengue case list (internal ids only).",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "list_kasus",
+          "file_path": "app.py",
+          "start_line": 62,
+          "end_line": 64
         },
         {
           "method": "GET",
@@ -84,8 +84,8 @@
           "headers_hint": [],
           "suggested_tool_name": "health",
           "file_path": "app.py",
-          "start_line": 63,
-          "end_line": 64
+          "start_line": 68,
+          "end_line": 69
         }
       ],
       "functions": []
@@ -96,6 +96,6 @@
       "functions": []
     }
   },
-  "lines_scanned": 73,
-  "updated_at": 1795086960468
+  "lines_scanned": 78,
+  "updated_at": 1795089485614
 }

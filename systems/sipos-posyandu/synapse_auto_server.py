@@ -15,7 +15,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("sipos-posyandu")
 
 
-@mcp.tool(name="list_posyandu", description="List all posyandu (health posts) with their village name (free text) and district.")
+@mcp.tool(name="list_posyandu", description="List posyandu (health posts) with their village name (free text) and district.")
 def list_posyandu() -> dict:
     url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/posyandu"
     headers = {}
@@ -27,9 +27,9 @@ def list_posyandu() -> dict:
         return {"status_code": resp.status_code, "text": resp.text}
 
 
-@mcp.tool(name="list_balita", description="List registered toddlers with their mother's NIK, village and latest nutrition status.")
-def list_balita() -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/balita"
+@mcp.tool(name="rekap_gizi", description="Village-level nutrition recap from the latest weighing: registered toddlers, counts per status and percent at risk.")
+def rekap_gizi() -> dict:
+    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/rekap/gizi"
     headers = {}
     resp = requests.get(url, headers=headers)
     resp.raise_for_status()
@@ -39,9 +39,9 @@ def list_balita() -> dict:
         return {"status_code": resp.status_code, "text": resp.text}
 
 
-@mcp.tool(name="list_balita_berisiko", description="List at-risk toddlers: latest weighing shows gizi kurang, gizi buruk or stunting.")
-def list_balita_berisiko() -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/balita-berisiko"
+@mcp.tool(name="rekap_gizi_tren", description="Monthly trend per village: number of toddlers weighed and number at risk in each month.")
+def rekap_gizi_tren() -> dict:
+    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/rekap/gizi/tren"
     headers = {}
     resp = requests.get(url, headers=headers)
     resp.raise_for_status()
@@ -51,33 +51,9 @@ def list_balita_berisiko() -> dict:
         return {"status_code": resp.status_code, "text": resp.text}
 
 
-@mcp.tool(name="get_balita", description="Get one toddler by id, including mother's NIK and latest nutrition status.")
-def get_balita(balita_id: Any = None) -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/balita/{balita_id}"
-    headers = {}
-    resp = requests.get(url, headers=headers)
-    resp.raise_for_status()
-    try:
-        return resp.json()
-    except ValueError:
-        return {"status_code": resp.status_code, "text": resp.text}
-
-
-@mcp.tool(name="get_penimbangan", description="Monthly weighing history (weight kg, height cm, nutrition status) of one toddler.")
-def get_penimbangan(balita_id: Any = None) -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/balita/{balita_id}/penimbangan"
-    headers = {}
-    resp = requests.get(url, headers=headers)
-    resp.raise_for_status()
-    try:
-        return resp.json()
-    except ValueError:
-        return {"status_code": resp.status_code, "text": resp.text}
-
-
-@mcp.tool(name="get_balita_by_ibu", description="List the toddlers registered under a mother's 16-digit NIK.")
-def get_balita_by_ibu(nik_ibu: Any = None) -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/ibu/{nik_ibu}/balita"
+@mcp.tool(name="rekap_penimbangan", description="Posyandu attendance per month (D/S): toddlers weighed (D) out of registered (S), per health post.")
+def rekap_penimbangan() -> dict:
+    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/rekap/penimbangan"
     headers = {}
     resp = requests.get(url, headers=headers)
     resp.raise_for_status()

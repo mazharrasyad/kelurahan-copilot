@@ -28,13 +28,13 @@ SYSTEMS = {
         "label": "SIPOS Posyandu",
         "server": os.environ.get("SIPOS_MCP", os.path.join(ROOT, "systems", "sipos-posyandu", "synapse_auto_server.py")),
         "base": os.environ.get("SIPOS_BASE_URL", "http://127.0.0.1:8101"),
-        "about": "health-post records: toddlers (balita), mother's NIK (nik_ibu), village NAME (free text, field 'kelurahan'), monthly weighings and nutrition status",
+        "about": "health posts (posyandu) and village-level nutrition recaps of toddlers; villages are identified by NAME (free text, field 'kelurahan')",
     },
     "sidbd": {
         "label": "SI-DBD",
         "server": os.environ.get("SIDBD_MCP", os.path.join(ROOT, "systems", "si-dbd", "synapse_auto_server.py")),
         "base": os.environ.get("SIDBD_BASE_URL", "http://127.0.0.1:8102"),
-        "about": "dengue surveillance: cases by patient NIK and official village CODE (kode_kelurahan), larva inspections; list_wilayah maps codes to village names",
+        "about": "dengue surveillance recaps and larva inspections; villages are identified by official CODE (kode_kelurahan); list_wilayah maps codes to village names",
     },
 }
 
@@ -44,13 +44,14 @@ LLM_MODEL = os.environ.get("LLM_MODEL", "openai/gpt-oss-120b")
 MAX_STEPS = int(os.environ.get("AGENT_MAX_STEPS", "10"))
 MAX_TOOL_CHARS = 14000
 
-SYSTEM_PROMPT = """You are a public-health data copilot for a district government in Indonesia.
+SYSTEM_PROMPT = """You are Kelurahan Copilot, a public-health planning assistant for a district health office in Indonesia.
 You can only see data through tools from two separate legacy systems that share no database:
 {systems}
 Rules:
-- The same person appears in both systems. Join people ONLY by the exact 16-digit NIK (SIPOS: nik_ibu of the mother; SI-DBD: nik of the patient).
-- Join villages by mapping SIPOS's village name to SI-DBD's kode_kelurahan with sidbd__list_wilayah (compare names case-insensitively).
-- Tools take no filters except path ids: fetch the list and filter it yourself. "Active" dengue cases are status suspek or terkonfirmasi.
+- You only receive village-level aggregates. No personal data (NIK, names, addresses) is available or needed; never ask for it.
+- The two systems name villages differently: join them by mapping SIPOS's village name to SI-DBD's kode_kelurahan with sidbd__list_wilayah (compare names case-insensitively). Show both the village name and code.
+- Tools take no filters: fetch the recap and filter or rank it yourself. "Active" dengue cases = field aktif. At-risk toddlers = gizi kurang + gizi buruk + stunting. The larva-free index (ABJ) target is >= 95%; use the latest inspection per village.
+- When asked to prioritise, rank by both signals together and explain the ranking in one line.
 - Never invent records. If something is not in the tool results, say so.
 - Answer in the user's language, concisely, with a short table or bullet list. For every fact, say which system it came from (SIPOS or SI-DBD).
 - Use the minimum number of tool calls needed."""

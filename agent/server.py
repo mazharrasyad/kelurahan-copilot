@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 
 import agent
 
-app = FastAPI(title="NIK Copilot", docs_url=None, redoc_url=None)
+app = FastAPI(title="Kelurahan Copilot", docs_url=None, redoc_url=None)
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE_PATH = (os.environ.get("BASE_PATH") or "/").rstrip("/") + "/"
 PER_MIN = int(os.environ.get("ASK_PER_MIN", "6"))

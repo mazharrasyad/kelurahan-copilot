@@ -27,9 +27,9 @@ def list_wilayah() -> dict:
         return {"status_code": resp.status_code, "text": resp.text}
 
 
-@mcp.tool(name="list_kasus", description="List dengue cases with patient NIK, village code, onset date and status.")
-def list_kasus() -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/kasus"
+@mcp.tool(name="rekap_kasus", description="Dengue recap per village code: active cases (suspek + terkonfirmasi), confirmed, suspected, recovered, and new cases in the last 14 days.")
+def rekap_kasus() -> dict:
+    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/rekap/kasus"
     headers = {}
     resp = requests.get(url, headers=headers)
     resp.raise_for_status()
@@ -39,9 +39,9 @@ def list_kasus() -> dict:
         return {"status_code": resp.status_code, "text": resp.text}
 
 
-@mcp.tool(name="get_kasus_by_nik", description="Look up dengue cases of one person by their 16-digit NIK (empty list if none).")
-def get_kasus_by_nik(nik: Any = None) -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/kasus/nik/{nik}"
+@mcp.tool(name="rekap_kasus_mingguan", description="Weekly new dengue cases per village code (week starting Monday), by onset date.")
+def rekap_kasus_mingguan() -> dict:
+    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/rekap/kasus/mingguan"
     headers = {}
     resp = requests.get(url, headers=headers)
     resp.raise_for_status()
@@ -51,19 +51,7 @@ def get_kasus_by_nik(nik: Any = None) -> dict:
         return {"status_code": resp.status_code, "text": resp.text}
 
 
-@mcp.tool(name="get_kasus", description="Get one dengue case by id.")
-def get_kasus(kasus_id: Any = None) -> dict:
-    url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/kasus/{kasus_id}"
-    headers = {}
-    resp = requests.get(url, headers=headers)
-    resp.raise_for_status()
-    try:
-        return resp.json()
-    except ValueError:
-        return {"status_code": resp.status_code, "text": resp.text}
-
-
-@mcp.tool(name="list_jentik", description="Weekly larva inspections per village: houses checked, positive houses and larva-free index (ABJ %).")
+@mcp.tool(name="list_jentik", description="Weekly larva inspections per village: houses checked, houses with larvae and larva-free index (ABJ %, target >= 95).")
 def list_jentik() -> dict:
     url = f"{os.environ["ENDPOINT_BASE_URL"]}/api/jentik"
     headers = {}

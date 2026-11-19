@@ -1,4 +1,4 @@
-# NIK Copilot on one VPS: two legacy APIs (internal only) + the agent web app.
+# Kelurahan Copilot on one VPS: two legacy APIs (internal only) + the agent web app.
 # The agent runs the two Synapse-generated MCP servers as stdio subprocesses.
 x-py: &py
   build: .
@@ -31,7 +31,7 @@ services:
       PYTHONUNBUFFERED: "1"
       SIPOS_BASE_URL: http://sipos:8101
       SIDBD_BASE_URL: http://sidbd:8102
-      BASE_PATH: /nik-copilot
+      BASE_PATH: /kelurahan-copilot
     env_file:
       - path: .env
         required: false

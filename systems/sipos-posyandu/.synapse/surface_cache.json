@@ -7,85 +7,85 @@
   "captured_functions": false,
   "files": {
     "app.py": {
-      "sha": "4074d093cf5e4e6d46306d80169f127a7a3f41d29d5351e615ca48bf9c340159",
+      "sha": "230550ac8e17326f6f88efc5c2be869fbcf72b4e48b16bf0440d15be4607fe89",
       "endpoints": [
         {
           "method": "GET",
           "path": "/api/posyandu",
           "handler_module": "app",
           "handler_qualname": "list_posyandu",
-          "description": "List all posyandu (health posts) with their village name (free text) and district.",
+          "description": "List posyandu (health posts) with their village name (free text) and district.",
           "payload_example": null,
           "headers_hint": [],
           "suggested_tool_name": "list_posyandu",
           "file_path": "app.py",
-          "start_line": 30,
-          "end_line": 32
+          "start_line": 34,
+          "end_line": 36
+        },
+        {
+          "method": "GET",
+          "path": "/api/rekap/gizi",
+          "handler_module": "app",
+          "handler_qualname": "rekap_gizi",
+          "description": "Village-level nutrition recap from the latest weighing: registered toddlers, counts per status and percent at risk.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "rekap_gizi",
+          "file_path": "app.py",
+          "start_line": 40,
+          "end_line": 56
+        },
+        {
+          "method": "GET",
+          "path": "/api/rekap/gizi/tren",
+          "handler_module": "app",
+          "handler_qualname": "rekap_gizi_tren",
+          "description": "Monthly trend per village: number of toddlers weighed and number at risk in each month.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "rekap_gizi_tren",
+          "file_path": "app.py",
+          "start_line": 60,
+          "end_line": 68
+        },
+        {
+          "method": "GET",
+          "path": "/api/rekap/penimbangan",
+          "handler_module": "app",
+          "handler_qualname": "rekap_penimbangan",
+          "description": "Posyandu attendance per month (D/S): toddlers weighed (D) out of registered (S), per health post.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "rekap_penimbangan",
+          "file_path": "app.py",
+          "start_line": 72,
+          "end_line": 86
         },
         {
           "method": "GET",
           "path": "/api/balita",
           "handler_module": "app",
           "handler_qualname": "list_balita",
-          "description": "List registered toddlers with their mother's NIK, village and latest nutrition status.",
+          "description": "Record-level list of registered toddlers (internal ids only).",
           "payload_example": null,
           "headers_hint": [],
           "suggested_tool_name": "list_balita",
           "file_path": "app.py",
-          "start_line": 36,
-          "end_line": 44
-        },
-        {
-          "method": "GET",
-          "path": "/api/balita-berisiko",
-          "handler_module": "app",
-          "handler_qualname": "list_balita_berisiko",
-          "description": "List at-risk toddlers: latest weighing shows gizi kurang, gizi buruk or stunting.",
-          "payload_example": null,
-          "headers_hint": [],
-          "suggested_tool_name": "list_balita_berisiko",
-          "file_path": "app.py",
-          "start_line": 48,
-          "end_line": 54
-        },
-        {
-          "method": "GET",
-          "path": "/api/balita/{balita_id}",
-          "handler_module": "app",
-          "handler_qualname": "get_balita",
-          "description": "Get one toddler by id, including mother's NIK and latest nutrition status.",
-          "payload_example": null,
-          "headers_hint": [],
-          "suggested_tool_name": "get_balita",
-          "file_path": "app.py",
-          "start_line": 58,
-          "end_line": 63
+          "start_line": 91,
+          "end_line": 93
         },
         {
           "method": "GET",
           "path": "/api/balita/{balita_id}/penimbangan",
           "handler_module": "app",
           "handler_qualname": "get_penimbangan",
-          "description": "Monthly weighing history (weight kg, height cm, nutrition status) of one toddler.",
+          "description": "Weighing history of one toddler record.",
           "payload_example": null,
           "headers_hint": [],
           "suggested_tool_name": "get_penimbangan",
           "file_path": "app.py",
-          "start_line": 67,
-          "end_line": 71
-        },
-        {
-          "method": "GET",
-          "path": "/api/ibu/{nik_ibu}/balita",
-          "handler_module": "app",
-          "handler_qualname": "get_balita_by_ibu",
-          "description": "List the toddlers registered under a mother's 16-digit NIK.",
-          "payload_example": null,
-          "headers_hint": [],
-          "suggested_tool_name": "get_balita_by_ibu",
-          "file_path": "app.py",
-          "start_line": 75,
-          "end_line": 77
+          "start_line": 97,
+          "end_line": 102
         },
         {
           "method": "GET",
@@ -97,18 +97,18 @@
           "headers_hint": [],
           "suggested_tool_name": "health",
           "file_path": "app.py",
-          "start_line": 81,
-          "end_line": 82
+          "start_line": 106,
+          "end_line": 107
         }
       ],
       "functions": []
     },
     "data.py": {
-      "sha": "b6b893c89f0651e8615dffb90e22551a2c0a96bfb95ec645b3e7702436ba32fa",
+      "sha": "0a39b464b4a796c55f65ca86bf18e515b4636492b7353846a11df3f7bc64238d",
       "endpoints": [],
       "functions": []
     }
   },
-  "lines_scanned": 95,
-  "updated_at": 1795087191142
+  "lines_scanned": 115,
+  "updated_at": 1795089469996
 }
