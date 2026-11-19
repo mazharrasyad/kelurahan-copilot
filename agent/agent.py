@@ -190,7 +190,8 @@ async def ask(question: str, history: list[dict] | None = None) -> Result:
             msg = await chat(messages, spec)
             calls = msg.get("tool_calls") or []
             if not calls:
-                result.answer = msg.get("content") or ""
+                # gpt-oss sometimes appends citation markers like 【sidbd__rekap_kasus】; the trace already shows sources
+                result.answer = re.sub(r"\s*【[^】]*】", "", msg.get("content") or "")
                 return result
             messages.append({"role": "assistant", "content": msg.get("content") or "", "tool_calls": calls})
             for call in calls:
