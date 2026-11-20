@@ -2,7 +2,7 @@
 
 **Track 3: A copilot that works across two systems.** Vibe-a-thon 2026 (2nd Brain Labs × Geek Room), Team HackRasaz.
 
-Live: **https://mazharrasyad.tech/kelurahan-copilot**
+Live: **https://mazharrasyad.tech/kelurahan-copilot** · Demo video: **https://youtu.be/Ci0tcEmkAMI**
 
 ## The problem
 
